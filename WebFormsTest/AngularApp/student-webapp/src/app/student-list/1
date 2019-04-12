@@ -1,0 +1,12 @@
+RC-12076 Discount is not being saved into database and therefore not appearing on the receipt
+TW2-3382 After Downgrading service Refund for goes to new added card instead of originally used card
+RC-12081 Create 2x Points Promotion in Dallas
+RC-12052 Split heavy requests to improve performance of APIs
+TW2-3287 Add new email templates to support prepaid
+
+RC-12072 [Cashier]After the same Coupon scanned two times there is no option to pay with POS.
+RC-12050 [Cashier]After Binding Ticket to Member Prepaid Reservation transaction details do not reflect reservation.
+
+TW2-3413 Touch event doesn't work on tablet/mobile with datepicker when the user touches quickly
+TW2-3338 Edit Reservation
+TW2-3400 Calculate Highest Percent Discount for Facility

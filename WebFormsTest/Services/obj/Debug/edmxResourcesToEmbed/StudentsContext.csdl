@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="StrPO_2018Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="StrPO_2018Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Sexes" EntityType="StrPO_2018Model.Sex" />
+    <EntitySet Name="Students" EntityType="StrPO_2018Model.Student" />
+    <AssociationSet Name="FK__Students__Sex__239E4DCF" Association="StrPO_2018Model.FK__Students__Sex__239E4DCF">
+      <End Role="Sex" EntitySet="Sexes" />
+      <End Role="Student" EntitySet="Students" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Sex">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Students" Relationship="StrPO_2018Model.FK__Students__Sex__239E4DCF" FromRole="Sex" ToRole="Student" />
+  </EntityType>
+  <EntityType Name="Student">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Surname" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Birthday" Type="DateTime" Precision="3" />
+    <Property Name="Sex" Type="Int32" />
+    <Property Name="Course" Type="Int32" />
+    <Property Name="Group" Type="Int32" />
+    <NavigationProperty Name="Sex1" Relationship="StrPO_2018Model.FK__Students__Sex__239E4DCF" FromRole="Student" ToRole="Sex" />
+  </EntityType>
+  <Association Name="FK__Students__Sex__239E4DCF">
+    <End Type="StrPO_2018Model.Sex" Role="Sex" Multiplicity="0..1" />
+    <End Type="StrPO_2018Model.Student" Role="Student" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sex">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Student">
+        <PropertyRef Name="Sex" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

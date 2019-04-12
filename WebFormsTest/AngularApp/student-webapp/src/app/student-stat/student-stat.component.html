@@ -1,0 +1,17 @@
+<div *ngIf="instance">
+  <h2>Statistics for {{instance.Name}} {{instance.Surname}} </h2>
+
+  <p>
+    <button (click)="Marks()">
+      Marks
+    </button>
+    <button (click)="Subjects()">
+      Subjects
+    </button>
+
+    <router-outlet></router-outlet>
+  </p>
+</div>
+<div *ngIf="!instance">
+  Loading...
+</div>

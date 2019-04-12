@@ -1,0 +1,6 @@
+C:\VSU\2018-2019\StrPO\WebForms\WebFormsTest\LogicLib\bin\Debug\LogicLib.dll
+C:\VSU\2018-2019\StrPO\WebForms\WebFormsTest\LogicLib\bin\Debug\LogicLib.pdb
+C:\VSU\2018-2019\StrPO\WebForms\WebFormsTest\LogicLib\obj\Debug\LogicLib.csproj.CoreCompileInputs.cache
+C:\VSU\2018-2019\StrPO\WebForms\WebFormsTest\LogicLib\obj\Debug\LogicLib.dll
+C:\VSU\2018-2019\StrPO\WebForms\WebFormsTest\LogicLib\obj\Debug\LogicLib.pdb
+C:\VSU\2018-2019\StrPO\WebForms\WebFormsTest\LogicLib\obj\Debug\LogicLib.csprojResolveAssemblyReference.cache

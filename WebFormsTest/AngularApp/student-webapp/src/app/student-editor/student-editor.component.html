@@ -1,0 +1,51 @@
+
+<form #studentForm="ngForm">
+  <div>
+    <label class="error" *ngIf="showError">{{error}}</label>
+    <br />
+    <button *ngIf="showError" (click)="backClick();">Back</button>
+
+    <label class="info" *ngIf="showInfo">{{info}}</label>
+  </div>
+  <div *ngIf="showContent">
+    <h2 mat-dialog-title>{{action}} Student {{instance.Surname  }}</h2>
+    <table>
+      <tr>
+        <td>Name</td>
+        <td><input [(ngModel)]="instance.Name" name="Name" /></td>
+      </tr>
+      <tr>
+        <td>Surname</td>
+        <td><input [(ngModel)]="instance.Surname" name="Surname" /></td>
+      </tr>
+      <tr>
+        <td>Course</td>
+        <td><input [(ngModel)]="instance.Course" name="Course" /></td>
+      </tr>
+      <tr>
+        <td>Group</td>
+        <td><input [(ngModel)]="instance.Group" name="Group" /></td>
+      </tr>
+      <tr>
+        <td>Sex</td>
+        <td>
+          <fieldset id="iSex">
+            <legend>Sex</legend>
+          </fieldset>
+        </td>
+      </tr>
+    </table>
+
+    <table>
+      <tr>
+        <td>
+          <button type="submit" mat-raised-button color="primary" (click)="onSaveClick(studentForm);">Save</button>
+        </td>
+        <td></td>
+        <td>
+          <button mat-raised-button color="accent" (click)="onCloseClick();">Close</button>
+        </td>
+      </tr>
+    </table>
+  </div>
+</form>

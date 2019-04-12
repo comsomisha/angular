@@ -1,0 +1,43 @@
+<h2 mat-dialog-title>Edit Student {{instance.Surname  }}</h2>
+<div>
+  <label class="error" *ngIf="showError">{{error}}</label>
+  <label class="info" *ngIf="showInfo">{{info}}</label>
+  <table>
+    <tr>
+      <td>Name</td>
+      <td><input [(ngModel)]="instance.Name" /></td>
+    </tr>
+    <tr>
+      <td>Surname</td>
+      <td><input [(ngModel)]="instance.Surname" /></td>
+    </tr>
+    <tr>
+      <td>Course</td>
+      <td><input [(ngModel)]="instance.Course" /></td>
+    </tr>
+    <tr>
+      <td>Group</td>
+      <td><input [(ngModel)]="instance.Group" /></td>
+    </tr>
+    <tr>
+      <td>Sex</td>
+      <td>
+        <fieldset id="iSex">
+          <legend>Sex</legend>
+        </fieldset>
+      </td>
+    </tr>
+  </table>
+
+  <table>
+    <tr>
+      <td>
+        <button mat-raised-button color="primary" (click)="onSaveClick();">Save</button>
+      </td>
+      <td></td>
+      <td>
+        <button mat-raised-button color="accent" (click)="onCloseClick();">Close</button>
+      </td>
+    </tr>
+  </table>
+</div>

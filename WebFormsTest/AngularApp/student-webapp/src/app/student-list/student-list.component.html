@@ -1,0 +1,55 @@
+
+<h2>Total: {{totalCount}}</h2>
+<h2>biggestGroup: {{biggestGroup}}</h2>
+  
+  <table class="table table-bordered">
+    <tr>
+      <th> 
+        <a (click)="sort('Name')">Name</a>
+        <span *ngIf='this.sortCol == "Name" && this.sortDest == "asc"'>▲</span>
+        <span *ngIf='this.sortCol == "Name" && this.sortDest == "desc"'>▼</span>
+      </th>
+      <th>
+        <a (click)="sort('Surname')">Surname</a>
+        <span *ngIf='this.sortCol == "Surname" && this.sortDest == "asc"'>▲</span>
+        <span *ngIf='this.sortCol == "Surname" && this.sortDest == "desc"'>▼</span>
+      </th>
+      <th>
+        <a (click)="sort('Course')">Course</a>
+        <span *ngIf='this.sortCol == "Course" && this.sortDest == "asc"'>▲</span>
+        <span *ngIf='this.sortCol == "Course" && this.sortDest == "desc"'>▼</span>
+      </th>
+      <th>
+        <a (click)="sort('Group')">Group</a>
+        <span *ngIf='this.sortCol == "Group" && this.sortDest == "asc"'>▲</span>
+        <span *ngIf='this.sortCol == "Group" && this.sortDest == "desc"'>▼</span>
+      </th>
+      <th>
+        <a (click)="sort('Sex')">Sex</a>
+        <span *ngIf='this.sortCol == "Sex" && this.sortDest == "asc"'>▲</span>
+        <span *ngIf='this.sortCol == "Sex" && this.sortDest == "desc"'>▼</span>
+      </th>
+      <th>
+      </th>
+    </tr>
+    <tbody>
+      <!--<tr *ngFor="let student of data | async"> -->
+      <tr *ngFor="let student of data">
+        <td *ngFor="let col of columns" [class.selected]="isSelected(student)">
+          {{student[col]}}
+        </td>
+        <td>
+          <button class="btn btn-success" (click)="onEditClick($event);" value="{{student.ID}}">Edit</button>
+          <button class="btn btn-warning" (click)="onDeleteClick($event);" value="{{student.ID}}">Delete</button>
+          <button class="btn btn-primary" (click)="onStatClick($event);" value="{{student.ID}}">Statistics</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <button class="btn btn-default" [disabled]="!backEnabled()" (click)="onBackward();">Back</button>
+  <button class="btn btn-default" [disabled]="!nextEnabled()" (click)="onForward();">Next</button>
+
+  <br />
+  <button class="btn btn-warning" (click)="onAddClick();">Add New Student</button>
+

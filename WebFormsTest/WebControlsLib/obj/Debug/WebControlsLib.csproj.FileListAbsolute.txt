@@ -1,0 +1,8 @@
+C:\VSU\2018-2019\StrPO\WebForms\WebFormsTest\WebControlsLib\obj\Debug\WebControlsLib.csprojResolveAssemblyReference.cache
+C:\VSU\2018-2019\StrPO\WebForms\WebFormsTest\WebControlsLib\obj\Debug\WebControlsLib.csproj.CoreCompileInputs.cache
+C:\VSU\2018-2019\StrPO\WebForms\WebFormsTest\WebControlsLib\bin\Debug\WebControlsLib.dll
+C:\VSU\2018-2019\StrPO\WebForms\WebFormsTest\WebControlsLib\bin\Debug\WebControlsLib.pdb
+C:\VSU\2018-2019\StrPO\WebForms\WebFormsTest\WebControlsLib\bin\Debug\LogicLib.dll
+C:\VSU\2018-2019\StrPO\WebForms\WebFormsTest\WebControlsLib\bin\Debug\LogicLib.pdb
+C:\VSU\2018-2019\StrPO\WebForms\WebFormsTest\WebControlsLib\obj\Debug\WebControlsLib.dll
+C:\VSU\2018-2019\StrPO\WebForms\WebFormsTest\WebControlsLib\obj\Debug\WebControlsLib.pdb
